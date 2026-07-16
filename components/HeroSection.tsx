@@ -3,86 +3,89 @@ import Navbar from "./Navbar";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen lg:h-screen lg:min-h-[750px] flex flex-col justify-between overflow-hidden">
-      {/* Background Hero Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero.png"
-          alt="Tarkus Hero - Teacher presenting in front of classroom"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        {/* Overall Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
-        
-        {/* Bottom dark gradient overlay for text readability (neutral black gradient, not blue) */}
-        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-      </div>
-
+    <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-white text-[#0b0742]">
       {/* Floating Navbar */}
       <div className="relative z-10 w-full">
-        <Navbar />
+        <Navbar theme="light" />
       </div>
 
-      {/* Bottom Content Area */}
-      <div className="relative z-10 w-full px-6 pt-10 pb-8 md:px-16 md:pb-10 lg:pb-8 lg:pt-0 mt-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-8">
+      {/* Main Content Area */}
+      <div className="relative z-10 flex-grow flex items-start w-full px-6 pt-2 pb-8 md:px-16 md:pt-4 md:pb-10 lg:pt-6 lg:pb-12">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-stretch">
           
           {/* Left Column: Title, Description, and Actions */}
-          <div className="max-w-2xl flex flex-col gap-6 text-white lg:mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight">
-              Your Child Is Getting<br className="hidden sm:inline" />
-              Good Grades. Are They<br className="hidden sm:inline" />
-              Getting Ready For Life?
-            </h1>
-            
-            <p className="text-lg sm:text-xl font-light leading-relaxed text-zinc-200 max-w-xl">
-              Live, hands-on training in public speaking, confidence, and leadership — delivered right at your child's school.
-            </p>
-            
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-wrap sm:flex-nowrap gap-4 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-initial bg-white text-zinc-950 font-semibold px-8 py-3.5 rounded-full hover:bg-zinc-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-sm md:text-base shadow-lg cursor-pointer">
-                  Offline Training
-                </button>
-                <button className="flex-1 sm:flex-initial bg-white text-zinc-950 font-semibold px-8 py-3.5 rounded-full hover:bg-zinc-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-sm md:text-base shadow-lg cursor-pointer">
-                  Online Session
-                </button>
-              </div>
-              <p className="text-zinc-300 text-xs md:text-sm font-light mt-1 text-left w-full">
-                Takes 30 seconds. We'll reach out to your school directly.
+          <div className="lg:col-span-5 max-w-2xl flex flex-col justify-between text-[#0b0742] lg:h-full">
+            {/* Top Text Group */}
+            <div className="flex flex-col gap-6">
+              <h1 className="text-3xl sm:text-4xl md:text-[46px] lg:text-[50px] font-bold leading-[1.15] tracking-tight">
+                Your Child Is Getting<br />
+                <span className="italic font-bold">Good Grades.</span><br />
+                Are They Getting<br />
+                <span className="italic font-bold">Ready For </span><span className="font-bold">Life?</span>
+              </h1>
+              
+              <p className="text-lg sm:text-[20px] font-normal leading-relaxed text-zinc-600 max-w-xl">
+                Live, hands-on training in public speaking, confidence, and leadership delivered right at your child's school.
               </p>
+            </div>
+            
+            {/* Bottom Button Group */}
+            <div className="flex flex-wrap sm:flex-nowrap gap-4 w-full sm:w-auto mt-8 lg:mt-0">
+              <button className="flex-1 sm:flex-initial bg-[#0b0742] text-white font-[550] px-8 py-3.5 rounded-full hover:bg-opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-[17px] sm:text-lg md:text-[19px] shadow-lg cursor-pointer">
+                Offline Training
+              </button>
+              <button className="flex-1 sm:flex-initial bg-[#0b0742] text-white font-[550] px-8 py-3.5 rounded-full hover:bg-opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-[17px] sm:text-lg md:text-[19px] shadow-lg cursor-pointer">
+                Online Session
+              </button>
             </div>
           </div>
 
-          {/* Right Column: Glassmorphism Container with Pills and Stat */}
-          <div className="w-full lg:w-[560px] lg:flex-shrink-0 bg-white/[0.14] backdrop-blur-xl border border-white/20 rounded-[24px] p-6 sm:p-7 flex flex-col gap-6 shadow-2xl lg:ml-auto">
-            {/* Pill Tags */}
-            <div className="flex flex-row justify-between items-center gap-1.5 sm:gap-2 w-full overflow-x-auto scrollbar-none">
-              <span className="px-2.5 sm:px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.08] text-zinc-300 text-[10px] sm:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
-                Speak with confidence
-              </span>
-              <span className="px-2.5 sm:px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.08] text-zinc-300 text-[10px] sm:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
-                Lead with presence
-              </span>
-              <span className="px-2.5 sm:px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.08] text-zinc-300 text-[10px] sm:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
-                Think under pressure
-              </span>
+          {/* Right Column: Graphic, Pills, and Stat */}
+          <div className="lg:col-span-7 w-full flex flex-col items-center max-w-[700px] lg:ml-auto">
+            {/* Logo Graphic */}
+            <div className="relative w-full max-w-[680px] mb-6" style={{ aspectRatio: "3068 / 1416" }}>
+              <Image
+                src="/herosectionlogo.png"
+                alt="Tarkus graphic with foundations and roof"
+                fill
+                priority
+                className="object-contain"
+              />
             </div>
 
-            {/* Statistics Block */}
-            <div className="flex items-center gap-4">
-              <span className="text-5xl sm:text-6xl font-light text-white tracking-tighter leading-none whitespace-nowrap">
-                88%
-              </span>
-              <p className="text-xs sm:text-sm text-zinc-300 font-mono leading-[1.4] text-left">
-                of parents saw improved confidence and classroom participation within one term.
-              </p>
+            {/* Bottom Group: Pills and Stat */}
+            <div className="w-full flex flex-col gap-6 max-w-[480px]">
+              {/* Pill Tags */}
+              <div className="flex flex-row justify-between items-center gap-1.5 sm:gap-2 w-full">
+                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full border border-purple-100/60 bg-[#f4f3ff] text-[#0b0742] text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
+                  Speak with confidence
+                </span>
+                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full border border-purple-100/60 bg-[#f4f3ff] text-[#0b0742] text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
+                  Lead with presence
+                </span>
+                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full border border-purple-100/60 bg-[#f4f3ff] text-[#0b0742] text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono whitespace-nowrap text-center">
+                  Think under pressure
+                </span>
+              </div>
+
+              {/* Statistics Block */}
+              <div className="flex items-center gap-4 w-full px-2">
+                <span className="text-4xl sm:text-[44px] font-light text-[#0b0742] tracking-tighter leading-none whitespace-nowrap">
+                  88%
+                </span>
+                <p className="text-xs sm:text-sm text-black font-mono leading-[1.4] text-left flex-grow">
+                  of parents saw improved confidence and<br />classroom participation within one term.
+                </p>
+              </div>
             </div>
           </div>
           
         </div>
+      </div>
+
+      {/* Bottom Stripline */}
+      <div className="w-full bg-[#0b0742] text-white text-center py-3 text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase select-none">
+        BUILDING THE LEADERS OF TOMORROW
       </div>
     </section>
   );

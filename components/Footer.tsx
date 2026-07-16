@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Text Strip */}
-      <div className="bg-[#080227] w-full px-6 py-4 md:px-16 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-400 font-light border-t border-[#16103a]">
+      <div className="bg-[#0b0742] w-full px-6 py-4 md:px-16 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-400 font-light border-t border-[#16103a]">
         <div>
           © 2026 Tarkus. All rights reserved.
         </div>

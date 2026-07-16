@@ -9,7 +9,7 @@ export default function ContactHero() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col bg-[#080227] overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col bg-[#0b0742] overflow-hidden">
       {/* Navbar overlay */}
       <div className="relative z-10 w-full">
         <Navbar />
