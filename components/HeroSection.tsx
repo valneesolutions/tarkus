@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-navy-950 text-white">
       {/* Floating Navbar */}
-      <div className="relative z-10 w-full">
+      <div className="relative z-30 w-full">
         <Navbar theme="dark" />
       </div>
 
@@ -22,7 +22,7 @@ export default function HeroSection() {
                 Your Child Is Getting<br />
                 <span className="italic font-bold">Good Grades.</span><br />
                 Are They Getting<br />
-                <span className="italic font-bold">Ready For </span><span className="font-bold">Life?</span>
+                Ready For <span className="font-extrabold">Life</span> ?
               </h1>
               
               <p className="text-lg sm:text-[20px] font-normal leading-relaxed text-zinc-300 max-w-xl">
@@ -63,14 +63,14 @@ export default function HeroSection() {
             {/* Bottom Group: Pills and Stat */}
             <div className="w-full flex flex-col gap-6 max-w-[480px]">
               {/* Pill Tags */}
-              <div className="flex flex-row justify-between items-center gap-1.5 sm:gap-2 w-full">
-                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full bg-tint-lavender text-navy-950 text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
+              <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-2 w-full">
+                <span className="px-3 py-1.5 md:flex-1 rounded-full bg-[#EEE9FF]/30 border border-tint-lavender text-white text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
                   Speak with confidence
                 </span>
-                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full bg-tint-lavender text-navy-950 text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
+                <span className="px-3 py-1.5 md:flex-1 rounded-full bg-[#EEE9FF]/30 border border-tint-lavender text-white text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
                   Lead with presence
                 </span>
-                <span className="flex-1 px-1 sm:px-2 py-2 rounded-full bg-tint-lavender text-navy-950 text-[9.5px] sm:text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
+                <span className="px-3 py-1.5 md:flex-1 rounded-full bg-[#EEE9FF]/30 border border-tint-lavender text-white text-[10px] md:text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap text-center">
                   Think under pressure
                 </span>
               </div>

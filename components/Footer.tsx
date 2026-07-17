@@ -42,9 +42,6 @@ export default function Footer() {
             <Link href="/contact-us" className="font-bold text-base md:text-lg text-[#0b0742] hover:opacity-80 transition-opacity">
               Contact
             </Link>
-            <Link href="/brochure" className="font-bold text-base md:text-lg text-[#0b0742] hover:opacity-80 transition-opacity">
-              Brochure
-            </Link>
           </div>
         </div>
 

@@ -18,7 +18,7 @@ export default function AboutHero() {
       </div>
 
       {/* Floating Navbar */}
-      <div className="relative z-10 w-full">
+      <div className="relative z-30 w-full">
         <Navbar />
       </div>
 

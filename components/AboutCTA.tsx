@@ -28,10 +28,7 @@ export default function AboutCTA() {
         </div>
 
         {/* Subtext */}
-        <p className="text-zinc-500 text-xs md:text-sm font-light mt-4">
-          Takes 30 seconds. We'll reach out to your school directly.
-        </p>
-
+        
       </div>
     </section>
   );

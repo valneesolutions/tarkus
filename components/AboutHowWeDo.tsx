@@ -19,9 +19,9 @@ export default function AboutHowWeDo() {
           {/* Right Column: Three Stepper Columns */}
           <div className="lg:col-span-7 w-full flex flex-col justify-start">
             {/* Timeline Line & Dots */}
-            <div className="relative w-full mb-4">
+            <div className="hidden md:block relative w-full mb-4">
               <div className="absolute left-[6px] right-[calc(33.33%-6px)] top-[6px] h-[1px] bg-white/20 z-0" />
-              <div className="grid grid-cols-3 gap-6 relative z-10">
+              <div className="grid grid-cols-3 gap-6 md:gap-10 lg:gap-12 relative z-10">
                 <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
                 </div>
@@ -35,11 +35,18 @@ export default function AboutHowWeDo() {
             </div>
 
             {/* Stepper Details */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-10 lg:gap-x-12 w-full text-left">
               {/* Step 1: Ignite */}
-              <div className="flex flex-col">
+              <div className="flex flex-col relative pl-20 md:pl-0">
+                {/* Vertical line segment on mobile */}
+                <div className="absolute left-[6px] top-6 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                {/* Circular dot on mobile */}
+                <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                </div>
+                
                 {/* Flame Icon */}
-                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
+                <div className="absolute left-[24px] top-0 md:relative md:left-0 w-12 h-12 mb-4 z-10">
                   <Image
                     src="/fire.svg"
                     alt="Tarkus Ignite"
@@ -55,9 +62,16 @@ export default function AboutHowWeDo() {
               </div>
 
               {/* Step 2: Spark */}
-              <div className="flex flex-col">
+              <div className="flex flex-col relative pl-20 md:pl-0">
+                {/* Vertical line segment on mobile */}
+                <div className="absolute left-[6px] top-0 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                {/* Circular dot on mobile */}
+                <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                </div>
+                
                 {/* Lightning Icon */}
-                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
+                <div className="absolute left-[24px] top-0 md:relative md:left-0 w-12 h-12 mb-4 z-10">
                   <Image
                     src="/lightning.png"
                     alt="Tarkus Spark"
@@ -73,9 +87,16 @@ export default function AboutHowWeDo() {
               </div>
 
               {/* Step 3: Boost */}
-              <div className="flex flex-col">
+              <div className="flex flex-col relative pl-20 md:pl-0">
+                {/* Vertical line segment on mobile */}
+                <div className="absolute left-[6px] top-0 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                {/* Circular dot on mobile */}
+                <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                </div>
+                
                 {/* Boost Icon */}
-                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
+                <div className="absolute left-[24px] top-0 md:relative md:left-0 w-12 h-12 mb-4 z-10">
                   <Image
                     src="/boost.png"
                     alt="Tarkus Boost"
