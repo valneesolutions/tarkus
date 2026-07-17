@@ -20,15 +20,33 @@ export default function AboutHowWeDo() {
           <div className="lg:col-span-7 w-full flex flex-col justify-start">
             {/* Timeline Line & Dots */}
             <div className="hidden md:block relative w-full mb-4">
-              <div className="absolute left-[6px] right-[calc(33.33%-6px)] top-[6px] h-[1px] bg-white/20 z-0" />
+              {/* Connected horizontal line segments crossing gaps */}
+              <div className="absolute inset-0 z-0 hidden md:block">
+                <div className="grid grid-cols-3 gap-6 md:gap-10 lg:gap-12 w-full h-full items-center">
+                  {/* Col 1 Line: starts at first dot (24px) and goes to right edge, crossing the gap */}
+                  <div className="relative w-full h-[1px]">
+                    <div className="absolute left-[24px] right-[-24px] md:right-[-40px] lg:right-[-48px] h-[1px] bg-white/20" />
+                  </div>
+                  {/* Col 2 Line: goes from left edge of Col 2 to right edge, crossing the gap */}
+                  <div className="relative w-full h-[1px]">
+                    <div className="absolute left-0 right-[-24px] md:right-[-40px] lg:right-[-48px] h-[1px] bg-white/20" />
+                  </div>
+                  {/* Col 3 Line: goes from left edge of Col 3 to the third dot (24px) */}
+                  <div className="relative w-full h-[1px]">
+                    <div className="absolute left-0 w-[24px] h-[1px] bg-white/20" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Dots grid */}
               <div className="grid grid-cols-3 gap-6 md:gap-10 lg:gap-12 relative z-10">
-                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center ml-[18px]">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
                 </div>
-                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center ml-[18px]">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
                 </div>
-                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center ml-[18px]">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
                 </div>
               </div>
@@ -39,7 +57,7 @@ export default function AboutHowWeDo() {
               {/* Step 1: Ignite */}
               <div className="flex flex-col relative pl-20 md:pl-0">
                 {/* Vertical line segment on mobile */}
-                <div className="absolute left-[6px] top-6 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                <div className="absolute left-[6px] top-6 bottom-[-40px] w-[1px] bg-white/20 z-0 md:hidden" />
                 {/* Circular dot on mobile */}
                 <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
@@ -64,7 +82,7 @@ export default function AboutHowWeDo() {
               {/* Step 2: Spark */}
               <div className="flex flex-col relative pl-20 md:pl-0">
                 {/* Vertical line segment on mobile */}
-                <div className="absolute left-[6px] top-0 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                <div className="absolute left-[6px] top-0 bottom-[-40px] w-[1px] bg-white/20 z-0 md:hidden" />
                 {/* Circular dot on mobile */}
                 <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
@@ -89,7 +107,7 @@ export default function AboutHowWeDo() {
               {/* Step 3: Boost */}
               <div className="flex flex-col relative pl-20 md:pl-0">
                 {/* Vertical line segment on mobile */}
-                <div className="absolute left-[6px] top-0 bottom-0 w-[1px] bg-white/20 z-0 md:hidden" />
+                <div className="absolute left-[6px] top-0 h-6 w-[1px] bg-white/20 z-0 md:hidden" />
                 {/* Circular dot on mobile */}
                 <div className="absolute left-0 top-[18px] w-3 h-3 rounded-full border border-white bg-[#0b0742] flex items-center justify-center z-10 md:hidden">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />

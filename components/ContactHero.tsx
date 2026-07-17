@@ -6,10 +6,14 @@ import Navbar from "./Navbar";
 
 export default function ContactHero() {
   const [preferredMode, setPreferredMode] = useState<"offline" | "online">("offline");
+  const [email, setEmail] = useState("");
+  const [schoolName, setSchoolName] = useState("");
   const [grade, setGrade] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState<"success" | "error" | null>(null);
+
+  const isFormValid = email.trim() !== "" && schoolName.trim() !== "" && grade !== "" && agreed;
 
   const searchParams = useSearchParams();
 
@@ -85,7 +89,13 @@ export default function ContactHero() {
                   Thank you for reaching out. We have received your school details and will get back to you with a tailored proposal shortly.
                 </p>
                 <button
-                  onClick={() => setSubmitResult(null)}
+                  onClick={() => {
+                    setEmail("");
+                    setSchoolName("");
+                    setGrade("");
+                    setAgreed(false);
+                    setSubmitResult(null);
+                  }}
                   className="bg-[#0b0742] text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-opacity-95 transition-all cursor-pointer shadow-md"
                 >
                   Send another request
@@ -156,6 +166,8 @@ export default function ContactHero() {
                       type="email"
                       name="email"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="your.email@institute.com"
                       className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                     />
@@ -167,7 +179,7 @@ export default function ContactHero() {
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 98765 43210"
                       className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                     />
                   </div>
@@ -182,6 +194,8 @@ export default function ContactHero() {
                     type="text"
                     name="school_name"
                     required
+                    value={schoolName}
+                    onChange={(e) => setSchoolName(e.target.value)}
                     placeholder="Your school name"
                     className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                   />
@@ -256,9 +270,9 @@ export default function ContactHero() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting || !agreed}
+                  disabled={isSubmitting || !isFormValid}
                   className={`w-full bg-[#0b0742] text-white py-3.5 rounded-full font-semibold text-sm mt-3 shadow-md text-center flex items-center justify-center gap-2 transition-all cursor-pointer ${
-                    (isSubmitting || !agreed) ? "opacity-60 cursor-not-allowed" : "hover:bg-opacity-95 hover:scale-[1.01] active:scale-[0.99]"
+                    (isSubmitting || !isFormValid) ? "opacity-60 cursor-not-allowed" : "hover:bg-opacity-95 hover:scale-[1.01] active:scale-[0.99]"
                   }`}
                 >
                   {isSubmitting ? (

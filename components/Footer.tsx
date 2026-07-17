@@ -48,20 +48,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Text Strip */}
-      <div className="bg-[#0b0742] w-full px-6 py-4 md:px-16 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-400 font-light border-t border-[#16103a]">
+      <div className="bg-[#0b0742] w-full px-6 py-4 md:px-16 flex justify-center items-center text-xs text-zinc-400 font-light border-t border-[#16103a]">
         <div>
           © 2026 Tarkus. All rights reserved.
-        </div>
-        <div className="flex flex-row gap-4 sm:gap-6 items-center">
-          <Link href="/terms" className="hover:text-white transition-colors">
-            Terms of Service
-          </Link>
-          <Link href="/privacy" className="hover:text-white transition-colors">
-            Privacy Policy
-          </Link>
-          <Link href="/cookies" className="hover:text-white transition-colors">
-            Cookies
-          </Link>
         </div>
       </div>
     </footer>
