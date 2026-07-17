@@ -56,7 +56,7 @@ export default function ContactHero() {
                   <button
                     type="button"
                     onClick={() => setPreferredMode("offline")}
-                    className={`flex-1 py-1.5 px-3 rounded-lg flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
+                    className={`flex-1 py-1.5 px-4 rounded-full flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
                       preferredMode === "offline"
                         ? "bg-[#0b0742] text-white border-transparent"
                         : "bg-zinc-50 text-zinc-500 border-zinc-100 hover:bg-zinc-100"
@@ -74,7 +74,7 @@ export default function ContactHero() {
                   <button
                     type="button"
                     onClick={() => setPreferredMode("online")}
-                    className={`flex-1 py-1.5 px-3 rounded-lg flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
+                    className={`flex-1 py-1.5 px-4 rounded-full flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
                       preferredMode === "online"
                         ? "bg-[#0b0742] text-white border-transparent"
                         : "bg-zinc-50 text-zinc-500 border-zinc-100 hover:bg-zinc-100"
@@ -105,7 +105,7 @@ export default function ContactHero() {
                     type="email"
                     required
                     placeholder="your.email@institute.com"
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-lg py-1.5 px-3 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ export default function ContactHero() {
                   <input
                     type="tel"
                     placeholder="+1 (555) 123-4567"
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-lg py-1.5 px-3 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function ContactHero() {
                   type="text"
                   required
                   placeholder="Your school name"
-                  className="w-full bg-zinc-50 border border-zinc-100 rounded-lg py-1.5 px-3 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                  className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                 />
               </div>
 
@@ -143,7 +143,7 @@ export default function ContactHero() {
                     required
                     value={grade}
                     onChange={(e) => setGrade(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-lg py-1.5 px-3 text-xs text-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all appearance-none cursor-pointer"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 pl-4 pr-10 text-xs text-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>Select an option</option>
                     <option value="grade-5">Grade 5</option>
@@ -155,7 +155,7 @@ export default function ContactHero() {
                     <option value="grade-11">Grade 11</option>
                     <option value="grade-12">Grade 12</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-zinc-500">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-zinc-500">
                     <svg className="fill-current h-3.5 w-3.5" viewBox="0 0 20 20">
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
@@ -171,7 +171,7 @@ export default function ContactHero() {
                 <textarea
                   placeholder="Tell us more about your needs and how we can help you..."
                   rows={2}
-                  className="w-full bg-zinc-50 border border-zinc-100 rounded-lg py-1.5 px-3 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all resize-none h-[50px] xl:h-[65px]"
+                  className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl py-2 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all resize-none h-[50px] xl:h-[65px]"
                 />
               </div>
 
