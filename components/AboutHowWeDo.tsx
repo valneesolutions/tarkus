@@ -37,9 +37,9 @@ export default function AboutHowWeDo() {
             {/* Stepper Details */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
               {/* Step 1: Ignite */}
-              <div className="flex flex-col -ml-[18px]">
+              <div className="flex flex-col">
                 {/* Flame Icon */}
-                <div className="relative w-12 h-12 mb-4">
+                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
                   <Image
                     src="/fire.svg"
                     alt="Tarkus Ignite"
@@ -55,9 +55,9 @@ export default function AboutHowWeDo() {
               </div>
 
               {/* Step 2: Spark */}
-              <div className="flex flex-col -ml-[18px]">
+              <div className="flex flex-col">
                 {/* Lightning Icon */}
-                <div className="relative w-12 h-12 mb-4">
+                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
                   <Image
                     src="/lightning.png"
                     alt="Tarkus Spark"
@@ -73,9 +73,9 @@ export default function AboutHowWeDo() {
               </div>
 
               {/* Step 3: Boost */}
-              <div className="flex flex-col -ml-[18px]">
+              <div className="flex flex-col">
                 {/* Boost Icon */}
-                <div className="relative w-12 h-12 mb-4">
+                <div className="relative w-12 h-12 mb-4 md:-ml-[18px]">
                   <Image
                     src="/boost.png"
                     alt="Tarkus Boost"

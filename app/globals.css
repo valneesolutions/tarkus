@@ -11,6 +11,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
+  --color-navy-950: #0b0742;
+  --color-tint-lavender: #f2ebff;
 }
 
 @media (prefers-color-scheme: dark) {

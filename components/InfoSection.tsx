@@ -14,13 +14,13 @@ export default function InfoSection() {
         <div className="flex flex-col items-start w-full max-w-[540px] lg:ml-auto">
           {/* Pill Tags */}
           <div className="flex flex-wrap lg:flex-nowrap justify-between w-full gap-2 mb-6">
-            <span className="px-3.5 py-1 rounded-full border border-white/10 bg-white/5 text-zinc-300 text-[11px] tracking-wide font-mono whitespace-nowrap">
+            <span className="px-3.5 py-1 rounded-full bg-tint-lavender text-navy-950 text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap">
               Speak with confidence
             </span>
-            <span className="px-3.5 py-1 rounded-full border border-white/10 bg-white/5 text-zinc-300 text-[11px] tracking-wide font-mono whitespace-nowrap">
+            <span className="px-3.5 py-1 rounded-full bg-tint-lavender text-navy-950 text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap">
               Lead with presence
             </span>
-            <span className="px-3.5 py-1 rounded-full border border-white/10 bg-white/5 text-zinc-300 text-[11px] tracking-wide font-mono whitespace-nowrap">
+            <span className="px-3.5 py-1 rounded-full bg-tint-lavender text-navy-950 text-[11px] tracking-wide font-mono font-semibold whitespace-nowrap">
               Think under pressure
             </span>
           </div>
