@@ -43,29 +43,29 @@ export default function ContactHero() {
           <div className="lg:col-span-7 w-full flex justify-start lg:justify-end">
             <form 
               onSubmit={(e) => e.preventDefault()}
-              className="bg-white rounded-3xl p-5 md:p-6 lg:p-6 xl:p-7 shadow-2xl text-[#0b0742] w-full max-w-[700px] flex flex-col gap-2.5 xl:gap-3 text-left"
+              className="bg-white rounded-3xl p-8 xl:p-10 shadow-2xl text-[#0b0742] w-full max-w-[700px] flex flex-col gap-4 text-left"
             >
               
               {/* Preferred Mode Selector */}
               <div>
-                <label className="text-[11px] font-bold text-[#0b0742] mb-1 block">
+                <label className="text-xs md:text-sm font-bold text-[#0b0742] mb-2 block">
                   Preferred mode *
                 </label>
-                <div className="flex flex-row gap-3 w-full">
+                <div className="flex flex-row gap-4 w-full">
                   {/* Offline Option */}
                   <button
                     type="button"
                     onClick={() => setPreferredMode("offline")}
-                    className={`flex-1 py-1.5 px-4 rounded-full flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
+                    className={`flex-1 py-3 px-5 rounded-full flex items-center gap-3 font-semibold text-sm cursor-pointer border transition-all duration-200 ${
                       preferredMode === "offline"
                         ? "bg-[#0b0742] text-white border-transparent"
                         : "bg-zinc-50 text-zinc-500 border-zinc-100 hover:bg-zinc-100"
                     }`}
                   >
-                    <span className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                    <span className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
                       preferredMode === "offline" ? "border-white" : "border-zinc-400"
                     }`}>
-                      {preferredMode === "offline" && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      {preferredMode === "offline" && <span className="w-2 h-2 rounded-full bg-white" />}
                     </span>
                     Offline
                   </button>
@@ -74,16 +74,16 @@ export default function ContactHero() {
                   <button
                     type="button"
                     onClick={() => setPreferredMode("online")}
-                    className={`flex-1 py-1.5 px-4 rounded-full flex items-center gap-2 font-semibold text-xs cursor-pointer border transition-all duration-200 ${
+                    className={`flex-1 py-3 px-5 rounded-full flex items-center gap-3 font-semibold text-sm cursor-pointer border transition-all duration-200 ${
                       preferredMode === "online"
                         ? "bg-[#0b0742] text-white border-transparent"
                         : "bg-zinc-50 text-zinc-500 border-zinc-100 hover:bg-zinc-100"
                     }`}
                   >
-                    <span className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                    <span className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
                       preferredMode === "online" ? "border-white" : "border-zinc-400"
                     }`}>
-                      {preferredMode === "online" && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      {preferredMode === "online" && <span className="w-2 h-2 rounded-full bg-white" />}
                     </span>
                     Online
                   </button>
@@ -91,51 +91,51 @@ export default function ContactHero() {
               </div>
 
               {/* Additional Details Header */}
-              <h2 className="text-xs xl:text-sm font-bold text-[#0b0742] border-b border-zinc-100 pb-1 mt-0.5">
+              <h2 className="text-base font-bold text-[#0b0742] border-b border-zinc-100 pb-2 mt-2">
                 Additional Details
               </h2>
 
               {/* Email and Phone Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-[11px] font-semibold text-zinc-600 mb-0.5 block">
+                  <label className="text-xs font-semibold text-zinc-600 mb-1.5 block">
                     Email address *
                   </label>
                   <input
                     type="email"
                     required
                     placeholder="your.email@institute.com"
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                   />
                 </div>
                 <div>
-                  <label className="text-[11px] font-semibold text-zinc-600 mb-0.5 block">
+                  <label className="text-xs font-semibold text-zinc-600 mb-1.5 block">
                     Phone
                   </label>
                   <input
                     type="tel"
                     placeholder="+1 (555) 123-4567"
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                   />
                 </div>
               </div>
 
               {/* School Name */}
               <div>
-                <label className="text-[11px] font-semibold text-zinc-600 mb-0.5 block">
+                <label className="text-xs font-semibold text-zinc-600 mb-1.5 block">
                   School name *
                 </label>
                 <input
                   type="text"
                   required
                   placeholder="Your school name"
-                  className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
+                  className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all"
                 />
               </div>
 
               {/* Child's Grade Dropdown */}
               <div>
-                <label className="text-[11px] font-semibold text-zinc-600 mb-0.5 block">
+                <label className="text-xs font-semibold text-zinc-600 mb-1.5 block">
                   Child's grade *
                 </label>
                 <div className="relative">
@@ -143,7 +143,7 @@ export default function ContactHero() {
                     required
                     value={grade}
                     onChange={(e) => setGrade(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-1.5 pl-4 pr-10 text-xs text-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all appearance-none cursor-pointer"
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-full py-3 pl-5 pr-12 text-sm text-zinc-800 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>Select an option</option>
                     <option value="grade-5">Grade 5</option>
@@ -155,8 +155,8 @@ export default function ContactHero() {
                     <option value="grade-11">Grade 11</option>
                     <option value="grade-12">Grade 12</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-zinc-500">
-                    <svg className="fill-current h-3.5 w-3.5" viewBox="0 0 20 20">
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-5 text-zinc-500">
+                    <svg className="fill-current h-4 w-4" viewBox="0 0 20 20">
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </div>
@@ -165,26 +165,26 @@ export default function ContactHero() {
 
               {/* Message */}
               <div>
-                <label className="text-[11px] font-semibold text-zinc-600 mb-0.5 block">
+                <label className="text-xs font-semibold text-zinc-600 mb-1.5 block">
                   Message
                 </label>
                 <textarea
                   placeholder="Tell us more about your needs and how we can help you..."
                   rows={2}
-                  className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl py-2 px-4 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all resize-none h-[50px] xl:h-[65px]"
+                  className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl py-3 px-5 text-sm text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-300 focus:bg-white transition-all resize-none h-[90px] xl:h-[110px]"
                 />
               </div>
 
               {/* Agreement Checkbox */}
-              <div className="flex items-start gap-2 mt-0.5">
+              <div className="flex items-start gap-2.5 mt-2">
                 <input
                   type="checkbox"
                   id="agree-checkbox"
                   checked={agreed}
                   onChange={(e) => setAgreed(e.target.checked)}
-                  className="w-3.5 h-3.5 rounded border-zinc-300 text-[#0b0742] focus:ring-[#0b0742] cursor-pointer mt-0.5 shrink-0"
+                  className="w-4 h-4 rounded border-zinc-300 text-[#0b0742] focus:ring-[#0b0742] cursor-pointer mt-0.5 shrink-0"
                 />
-                <label htmlFor="agree-checkbox" className="text-zinc-500 text-[10px] xl:text-[11px] leading-normal cursor-pointer select-none">
+                <label htmlFor="agree-checkbox" className="text-zinc-500 text-xs leading-normal cursor-pointer select-none">
                   I agree to receive communications from Tarkus and understand that I can unsubscribe at any time.
                 </label>
               </div>
@@ -192,7 +192,7 @@ export default function ContactHero() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#0b0742] text-white py-2.5 rounded-full font-semibold text-xs xl:text-sm mt-1.5 hover:bg-opacity-95 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer shadow-md text-center"
+                className="w-full bg-[#0b0742] text-white py-3.5 rounded-full font-semibold text-sm mt-3 hover:bg-opacity-95 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer shadow-md text-center"
               >
                 Let's Elevate Your Training Experience
               </button>
